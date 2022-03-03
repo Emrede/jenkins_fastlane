@@ -11,6 +11,7 @@
 		7F59F17227BAD51F000F48B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F59F17127BAD51F000F48B1 /* ContentView.swift */; };
 		7F59F17427BAD521000F48B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F59F17327BAD521000F48B1 /* Assets.xcassets */; };
 		7F59F17727BAD521000F48B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F59F17627BAD521000F48B1 /* Preview Assets.xcassets */; };
+		7F59F17E27C8F6F6000F48B1 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 7F59F17D27C8F6F6000F48B1 /* Gemfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		7F59F17127BAD51F000F48B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F59F17327BAD521000F48B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F59F17627BAD521000F48B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7F59F17D27C8F6F6000F48B1 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 		7F59F16327BAD51F000F48B1 = {
 			isa = PBXGroup;
 			children = (
+				7F59F17D27C8F6F6000F48B1 /* Gemfile */,
 				7F59F16E27BAD51F000F48B1 /* HelloWorld */,
 				7F59F16D27BAD51F000F48B1 /* Products */,
 			);
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F59F17E27C8F6F6000F48B1 /* Gemfile in Resources */,
 				7F59F17727BAD521000F48B1 /* Preview Assets.xcassets in Resources */,
 				7F59F17427BAD521000F48B1 /* Assets.xcassets in Resources */,
 			);
@@ -269,6 +273,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HelloWorld/Preview Content\"";
+				DEVELOPMENT_TEAM = K5W969Z7VB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -297,6 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HelloWorld/Preview Content\"";
+				DEVELOPMENT_TEAM = K5W969Z7VB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
