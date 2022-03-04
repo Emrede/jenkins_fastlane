@@ -24,8 +24,7 @@ platform :ios do
       clean: true,
       export_method: 'development',
       output_directory: "~/Desktop", # Destination directory. Defaults to current directory.
-      output_name: "fastlane_jenkins.ipa",
-      keychain_password: "gtraef24=A"
+      output_name: "fastlane_jenkins.ipa"
     )
   end
 end
