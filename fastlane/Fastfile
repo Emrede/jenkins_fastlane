@@ -20,12 +20,12 @@ platform :ios do
   lane :appcenter_release do
     generate_ipa_develop
     appcenter_upload(
-      api_token: ENV['448a74be74c8f7acc3e468ab6df22a184c14b501'],
-      owner_name: ENV['emre-d'],
-      app_name: ENV['jenkins_fastlane'],
-      file: ENV['/Users/Emre.Demir/Desktop/fastlane_jenkins.ipa'],
+      api_token: ENV['APPCENTER_KEY'],
+      owner_name: ENV['APPCENTER_OWNER'],
+      app_name: ENV['APPCENTER_APPNAME'],
+      file: ENV['IPA_PATH'],
       notify_testers: true,
-      destinations: ENV['https://install.appcenter.ms/users/emre-d/apps/jenkins_fastlane']
+      destinations: ENV['APPCENTER_DESTINATION']
     )
     clean_build_artifacts
   end
