@@ -27,4 +27,16 @@ platform :ios do
       output_name: "fastlane_jenkins.ipa"
     )
   end
+  lane :appcenter_release do
+    generate_ipa_develop
+    appcenter_upload(
+     api_token: ENV['APPCENTER_KEY'],
+     owner_name: ENV['APPCENTER_OWNER'],
+     app_name: ENV['APPCENTER_APPNAME'],
+     file: ENV['IPA_PATH'],
+     notify_testers: true,
+     destinations: ENV['APPCENTER_DESTINATION']
+    )
+    clean_build_artifacts
+   end
 end
