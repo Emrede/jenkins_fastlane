@@ -1,0 +1,31 @@
+String repoUrl = "https://github.com/Emrede/jenkins_fastlane.git"
+
+pipeline {
+    environment {
+    LANG="en_US.UTF-8"
+    LANGUAGE="en_US.UTF-8"
+    LC_ALL="en_US.UTF-8"
+    APPCENTER_API_TOKEN = credentials('app-center-api-token-ios')
+    KEYCHAIN_PASSWORD = credentials('app-keychain-password')
+    CERTIFICATE_PASSWORD = credentials('app-certificate-password')
+    RUBY_VERSION = '3.0.0'
+    PATH = "~/.rbenv/versions/${RUBY_VERSION}/bin:${PATH}:/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.fastlane/bin:$PATH:~/.gem/ruby/${RUBY_VERSION}/bin:/usr/local/Cellar"
+    DEVELOPER_DIR = '/Applications/Xcode_13.2.1.app/Contents/Developer'
+  }
+    agent {label "Emre-Mac"}
+
+    stages {
+        stage('Source') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Emrede/jenkins_fastlane.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "bundle exec fastlane run unlock_keychain path:\"/Users/Emre.Demir/Library/Keychains/login.keychain-db\" password:\"/Users/Emre.Demir/Documents/mysecret\""
+                sh "bundle exec fastlane appcenter_release"
+
+            }
+        }
+    }
+}
